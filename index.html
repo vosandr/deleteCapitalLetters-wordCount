@@ -19,7 +19,7 @@
         },
         methods: {
             setMessage: function(event){
-                  this.message = event.target.value.find(/\p{Ll}/)
+                  this.message = event.target.value.find(/\p{Ll}/g)
               
                   var Count = event.target.value.split(/\s+/);
                   this.wordCount = Count.length
