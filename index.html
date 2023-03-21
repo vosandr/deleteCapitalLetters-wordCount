@@ -8,6 +8,7 @@
 <div id="app">
     <input type="text" v-on:input="setMessage" />
     <p>{{message}}</p>
+    <p>{{Word}}</p>
     <p>{{wordCount}}</p>
 </div>
 <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
@@ -22,6 +23,7 @@
                   this.message = event.target.value.find(/\p{Ll}/g)
               
                   var Count = event.target.value.split(/\s+/);
+                  this.Word=Count
                   this.wordCount = Count.length
             }
         }
