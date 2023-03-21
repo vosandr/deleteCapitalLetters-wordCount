@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Проверка числа на трехзначность</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <input type="text" v-on:input="setMessage" />
+    <p>{{message}}</p>
+    <p>{{wordCount}}</p>
+</div>
+<script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Введите текст'
+        },
+        methods: {
+            setMessage: function(event){
+                  this.message = event.target.value.match(/\p{Ll}+/)
+              
+                  var Count = event.target.value.split(/\s+/);
+                  this.wordCount = Count.length
+            }
+        }
+    })
+</script>
+</body>
+</html>
