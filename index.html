@@ -20,12 +20,13 @@
         methods: {
             setMessage: function(event){
                     let userInput = event.target.value
-                    for (i=0; i<userInput.length; i++){
-                     if (userInput[i]!==userInput[i].toUpperCase()){
-                        let userOutput+=userInput[i]
-                     }
-                    }
-                  this.message = userOutput;
+                    
+//                     for (i=0; i<userInput.length; i++){
+//                      if (userInput[i]!==userInput[i].toUpperCase()){
+//                         let userOutput+=userInput[i]
+//                      }
+//                     }
+//                   this.message = userOutput;
                   
                   var Count = userInput.split(/\s+/);
                   this.Word=Count
